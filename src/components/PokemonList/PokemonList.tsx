@@ -4,12 +4,13 @@ import PokemonCard from '../PokemonCard/PokemonCard';
 import { Pokemon } from '../../types/pokemon';
 
 interface PokemonListProps {
-	pokemons: Pokemon[]
+	pokemons: Pokemon[];
+	className?: string;
 }
 
-const PokemonList: React.FC<PokemonListProps> = ({ pokemons = [] }) => {
+const PokemonList: React.FC<PokemonListProps> = ({ pokemons = [], className = '' }) => {
 	return (
-		<section className="pokemon-list">
+		<section className={`pokemon-list ${className}`}>
 			{pokemons.map(pokemon => <PokemonCard key={pokemon.id} pokemon={pokemon}/>)}
 		</section>
 	);

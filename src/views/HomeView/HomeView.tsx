@@ -14,8 +14,6 @@ const HomeView: React.FC = props => {
 		return <>Error</>;
 	}
 
-	console.log(data);
-
 	return (
 		<main>
 			<PokemonList pokemons={data.pokemons}/>

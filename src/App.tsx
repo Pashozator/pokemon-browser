@@ -13,7 +13,7 @@ const App = () => {
 			<BrowserRouter>
 				<Suspense fallback={<>Loading</>}>
 					<Switch>
-						<Route path="/:pokemon">
+						<Route path="/:name">
 							<DetailsView/>
 						</Route>
 						<Route path="/">
