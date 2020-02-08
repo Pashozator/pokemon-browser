@@ -1,15 +1,16 @@
+@import '../../styles/colors';
+@import '../../styles/mixins';
+
 .button {
   padding: 10px 20px 10px 20px;
   font-size: 13px;
   font-weight: 600;
   text-transform: uppercase;
-  border: 1px solid #e1e1e1;
+  border: 1px solid $grey;
   border-radius: 5px;
 
-  &:hover {
-    cursor: pointer;
-    color: #fff;
-    background: #000;
-    transition: all ease .3s;
+  @include hover() {
+    color: $white;
+    background: $black;
   }
 }

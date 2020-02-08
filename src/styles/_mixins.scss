@@ -1,0 +1,7 @@
+@mixin hover() {
+  &:hover {
+    @content;
+    cursor: pointer;
+    transition: all ease .3s;
+  }
+}
