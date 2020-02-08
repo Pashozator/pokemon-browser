@@ -2,7 +2,7 @@ import React from 'react';
 import './PokemonDetails.scss';
 import Card from '../Card/Card';
 import { Pokemon } from '../../types/pokemon';
-import PokemonEvolutionCard from '../PokemonEvolutionCard/PokemonEvolutionCard';
+import PokemonEvolutionList from '../PokemonEvolutionList/PokemonEvolutionList';
 
 interface PokemonDetailsProps {
 	pokemon: Pokemon;
@@ -42,8 +42,7 @@ const PokemonDetails: React.FC<PokemonDetailsProps> = ({ pokemon }) => {
 		  </li>}
 					{pokemon.evolutions && <li>
 			  <span className="label">Evolutions</span>
-						{pokemon.evolutions.map((evolution: Pokemon) => <PokemonEvolutionCard key={evolution.id}
-																																									evolution={evolution}/>)}
+			  <PokemonEvolutionList evolutions={pokemon.evolutions}/>
 		  </li>}
 				</ul>
 			</div>

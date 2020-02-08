@@ -2,6 +2,22 @@
 @import '../../styles/media-queries';
 
 .pokemon-evolution {
+  margin-bottom: 10px;
+  width: 100%;
+
+  @include for-up-sm() {
+    margin-bottom: 0;
+    width: unset;
+  }
+
+  button {
+    width: 100%;
+
+    @include for-up-sm() {
+      width: unset;
+    }
+  }
+
   &:not(:last-child) {
     margin-right: 10px;
   }
