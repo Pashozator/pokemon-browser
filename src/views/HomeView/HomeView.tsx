@@ -1,8 +1,11 @@
 import React from 'react';
+import PokemonList from '../../components/PokemonList/PokemonList';
 
 const HomeView: React.FC = props => {
 	return (
-		<div>HomeView works!</div>
+		<main>
+			<PokemonList />
+		</main>
 	);
 };
 
