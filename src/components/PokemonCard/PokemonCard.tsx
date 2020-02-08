@@ -1,11 +1,20 @@
 import React from 'react';
 import './PokemonCard.scss';
+import { Pokemon } from '../../types/pokemon';
+import { Link } from 'react-router-dom';
 
-const PokemonCard: React.FC = props => {
+interface PokemonCardProps {
+	pokemon: Pokemon;
+}
+
+const PokemonCard: React.FC<PokemonCardProps> = ({ pokemon }) => {
 	return (
-		<div className="card">
-			PokemonCard works!
-		</div>
+		<Link to={`/${pokemon.id}${pokemon.number}`}>
+			<button className="card">
+				{pokemon.name}
+				<img src={pokemon.image} alt=""/>
+			</button>
+		</Link>
 	)
 };
 
