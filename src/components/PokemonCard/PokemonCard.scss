@@ -2,12 +2,13 @@
 @import '../../styles/media-queries';
 
 .pokemon-card {
-  margin: 0 0 10px 10px;
+  margin: 0 0 10px 0;
   padding: 25px;
-  width: 95%;
+  width: 100%;
   height: auto;
 
   @include for-up-sm() {
+    margin-right: 10px;
     width: 400px;
     height: 400px;
   }
