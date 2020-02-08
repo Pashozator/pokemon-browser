@@ -9,7 +9,7 @@ interface PokemonCardProps {
 
 const PokemonCard: React.FC<PokemonCardProps> = ({ pokemon }) => {
 	return (
-		<Link to={`/${pokemon.id}${pokemon.number}`}>
+		<Link to={`/${pokemon.name}`}>
 			<button className="card">
 				{pokemon.name}
 				<img src={pokemon.image} alt=""/>
