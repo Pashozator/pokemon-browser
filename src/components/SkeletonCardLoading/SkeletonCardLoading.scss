@@ -1,0 +1,15 @@
+@import '../../styles/media-queries';
+
+.skeleton-card-loading {
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  display: flex;
+
+  @include for-up-sm() {
+    margin-right: 10px;
+    width: 400px;
+    height: 400px;
+  }
+}
