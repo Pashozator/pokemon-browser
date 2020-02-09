@@ -1,7 +1,10 @@
 @import '../../styles/media-queries';
 
 .skeleton-card-loading {
+  margin: 0 0 10px 0;
   padding: 20px;
+  width: 100%;
+  height: 400px;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -10,6 +13,5 @@
   @include for-up-sm() {
     margin-right: 10px;
     width: 400px;
-    height: 400px;
   }
 }
