@@ -1,11 +1,11 @@
 import React from 'react'
 import { shallow } from 'enzyme';
+import Button from './Button';
 import toJson from 'enzyme-to-json';
-import App from './App';
 
-describe('App component', () => {
+describe('Button component', () => {
 	it('should render', () => {
-		const wrapper = shallow(<App/>);
+		const wrapper = shallow(<Button>Button test</Button>);
 
 		expect(wrapper.exists()).toBeTruthy();
 		expect(toJson(wrapper)).toMatchSnapshot();

@@ -1,0 +1,15 @@
+@import '../../styles/media-queries';
+
+.pokemon-list {
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  display: flex;
+
+  @include for-up-sm() {
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+}

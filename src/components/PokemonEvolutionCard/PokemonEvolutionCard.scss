@@ -1,0 +1,41 @@
+@import '../../styles/mixins';
+@import '../../styles/media-queries';
+
+.pokemon-evolution {
+  margin-bottom: 10px;
+  width: 100%;
+
+  @include for-up-sm() {
+    margin-bottom: 0;
+    width: unset;
+  }
+
+  button {
+    width: 100%;
+
+    @include for-up-sm() {
+      width: unset;
+    }
+  }
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  .pokemon-evolution-card {
+    padding: 10px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    display: flex;
+
+    @include hover() {
+      box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .3);
+    }
+
+    img {
+      margin-right: 10px;
+      max-height: 45px;
+    }
+  }
+}

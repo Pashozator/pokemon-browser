@@ -1,0 +1,13 @@
+@import '../../styles/media-queries';
+
+.pokemon-evolution-list {
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  display: flex;
+
+  @include for-up-sm() {
+    align-items: center;
+    flex-direction: row;
+  }
+}

@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PokemonList component should render 1`] = `
+<section
+  className="pokemon-list "
+>
+  <PokemonCard
+    key="test"
+    pokemon={
+      Object {
+        "id": "test",
+        "image": "image",
+        "name": "Pikachu",
+      }
+    }
+  />
+</section>
+`;
