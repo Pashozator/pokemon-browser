@@ -5,6 +5,7 @@ import { pokemonQuery } from '../../core/graphql/queries/pokemon.query';
 import { useParams, } from 'react-router-dom';
 import PokemonDetails from '../../components/PokemonDetails/PokemonDetails';
 import Button from '../../components/Button/Button';
+import { useDocumentTitle } from '../../core/hooks/use-document-title';
 
 const DetailsView: React.FC = props => {
 	const params = useParams<any>();
@@ -13,6 +14,8 @@ const DetailsView: React.FC = props => {
 			name: params.name
 		}
 	});
+
+	useDocumentTitle(params.name);
 
 	if (error) {
 		return <>Error</>;
