@@ -13,7 +13,7 @@ const HomeView: React.FC = props => {
 	return (
 		<main>
 			<h1>Pokemon browser</h1>
-			<PokemonList pokemons={data && data.pokemons} loading={loading}/>
+			<PokemonList pokemons={data?.pokemons} loading={loading}/>
 		</main>
 	);
 };

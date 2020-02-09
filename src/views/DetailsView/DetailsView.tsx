@@ -14,20 +14,14 @@ const DetailsView: React.FC = props => {
 		}
 	});
 
-	if (loading) {
-		return <>Loading</>;
-	}
-
 	if (error) {
 		return <>Error</>;
 	}
 
-	const { pokemon } = data;
-
 	return (
 		<section className="details-view">
 			<Button link="/">Back to list</Button>
-			<PokemonDetails pokemon={pokemon}/>
+			<PokemonDetails pokemon={data?.pokemon} loading={loading}/>
 		</section>
 	);
 };

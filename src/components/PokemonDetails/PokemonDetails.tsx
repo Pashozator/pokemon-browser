@@ -3,46 +3,51 @@ import './PokemonDetails.scss';
 import Card from '../Card/Card';
 import { Pokemon } from '../../types/pokemon';
 import PokemonEvolutionList from '../PokemonEvolutionList/PokemonEvolutionList';
+import SkeletonCardLoading from '../SkeletonCardLoading/SkeletonCardLoading';
+import SkeletonLoading from '../SkeletonLoading/SkeletonLoading';
 
 interface PokemonDetailsProps {
 	pokemon: Pokemon;
+	loading?: boolean;
 }
 
-const PokemonDetails: React.FC<PokemonDetailsProps> = ({ pokemon }) => {
+const PokemonDetails: React.FC<PokemonDetailsProps> = ({ pokemon, loading = false }) => {
 	return (
 		<div className="pokemon-details">
-			<Card>
-				<div className="image">
-					<img src={pokemon.image} alt={pokemon.name}/>
-				</div>
-			</Card>
+			{loading ? <SkeletonCardLoading /> : (
+				<Card>
+					<div className="image">
+						<img src={pokemon?.image} alt={pokemon?.name}/>
+					</div>
+				</Card>
+			)}
 			<div className="description">
-				<h1>{pokemon.name}</h1>
+				<h1>{loading ? <SkeletonLoading style={{ width: 200 }}/> : pokemon?.name}</h1>
 				<ul>
-					{pokemon.maxHP && <li>
-			  <span className="label">Max HP</span> {pokemon.maxHP}
+					{(loading || pokemon?.maxHP) && <li>
+			  <span className="label">Max HP</span> {loading ? <SkeletonLoading style={{ width: 100 }}/> : pokemon?.maxHP}
 		  </li>}
-					{pokemon.maxCP && <li>
-			  <span className="label">Max CP</span> {pokemon.maxCP}
+					{(loading || pokemon?.maxCP) && <li>
+			  <span className="label">Max CP</span> {loading ? <SkeletonLoading style={{ width: 100 }}/> : pokemon?.maxCP}
 		  </li>}
-					{pokemon.fleeRate && <li>
-			  <span className="label">Flee rate</span> {pokemon.fleeRate}
+					{(loading || pokemon?.fleeRate) && <li>
+			  <span className="label">Flee rate</span> {loading ? <SkeletonLoading style={{ width: 100 }}/> : pokemon?.fleeRate}
 		  </li>}
-					{pokemon.classification && <li>
-			  <span className="label">Classification</span> {pokemon.classification}
+					{(loading || pokemon?.classification) && <li>
+			  <span className="label">Classification</span> {loading ? <SkeletonLoading style={{ width: 150 }}/> : pokemon?.classification}
 		  </li>}
-					{pokemon.types && <li>
-			  <span className="label">Types</span> {pokemon.types.toString()}
+					{(loading || pokemon?.types) && <li>
+			  <span className="label">Types</span> {loading ? <SkeletonLoading style={{ width: 100 }}/> : pokemon?.types.toString()}
 		  </li>}
-					{pokemon.resistant && <li>
-			  <span className="label">Resistant</span> {pokemon.resistant.toString()}
+					{(loading || pokemon?.resistant) && <li>
+			  <span className="label">Resistant</span> {loading ? <SkeletonLoading style={{ width: 150 }}/> : pokemon?.resistant.toString()}
 		  </li>}
-					{pokemon.weaknesses && <li>
-			  <span className="label">Weaknesses</span> {pokemon.weaknesses.toString()}
+					{(loading || pokemon?.weaknesses) && <li>
+			  <span className="label">Weaknesses</span> {loading ? <SkeletonLoading style={{ width: 150 }}/> : pokemon?.weaknesses.toString()}
 		  </li>}
-					{pokemon.evolutions && <li>
+					{(loading || pokemon?.evolutions) && <li>
 			  <span className="label">Evolutions</span>
-			  <PokemonEvolutionList evolutions={pokemon.evolutions}/>
+						{loading ? <SkeletonLoading style={{ width: 150 }}/> : <PokemonEvolutionList evolutions={pokemon?.evolutions}/>}
 		  </li>}
 				</ul>
 			</div>
