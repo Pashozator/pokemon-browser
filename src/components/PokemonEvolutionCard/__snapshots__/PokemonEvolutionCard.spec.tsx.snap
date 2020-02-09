@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PokemonEvolutionCard component should render 1`] = `
+<Link
+  className="pokemon-evolution"
+  to="/Pikachu"
+>
+  <button>
+    <Card
+      className="pokemon-evolution-card"
+    >
+      <img
+        alt="Pikachu"
+        src="image"
+      />
+      Pikachu
+    </Card>
+  </button>
+</Link>
+`;

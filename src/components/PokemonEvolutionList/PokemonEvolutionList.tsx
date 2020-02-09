@@ -4,7 +4,7 @@ import { Pokemon } from '../../types/pokemon';
 import PokemonEvolutionCard from '../PokemonEvolutionCard/PokemonEvolutionCard';
 
 interface PokemonEvolutionsProps {
-	evolutions: Pokemon[];
+	evolutions: Pokemon[] | undefined;
 }
 
 const PokemonEvolutionList: React.FC<PokemonEvolutionsProps> = ({ evolutions = [] }) => {

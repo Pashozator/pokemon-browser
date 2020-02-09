@@ -37,13 +37,13 @@ const PokemonDetails: React.FC<PokemonDetailsProps> = ({ pokemon, loading = fals
 			  <span className="label">Classification</span> {loading ? <SkeletonLoading style={{ width: 150 }}/> : pokemon?.classification}
 		  </li>}
 					{(loading || pokemon?.types) && <li>
-			  <span className="label">Types</span> {loading ? <SkeletonLoading style={{ width: 100 }}/> : pokemon?.types.toString()}
+			  <span className="label">Types</span> {loading ? <SkeletonLoading style={{ width: 100 }}/> : pokemon?.types?.toString()}
 		  </li>}
 					{(loading || pokemon?.resistant) && <li>
-			  <span className="label">Resistant</span> {loading ? <SkeletonLoading style={{ width: 150 }}/> : pokemon?.resistant.toString()}
+			  <span className="label">Resistant</span> {loading ? <SkeletonLoading style={{ width: 150 }}/> : pokemon?.resistant?.toString()}
 		  </li>}
 					{(loading || pokemon?.weaknesses) && <li>
-			  <span className="label">Weaknesses</span> {loading ? <SkeletonLoading style={{ width: 150 }}/> : pokemon?.weaknesses.toString()}
+			  <span className="label">Weaknesses</span> {loading ? <SkeletonLoading style={{ width: 150 }}/> : pokemon?.weaknesses?.toString()}
 		  </li>}
 					{(loading || pokemon?.evolutions) && <li>
 			  <span className="label">Evolutions</span>

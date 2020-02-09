@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PokemonDetails component should render 1`] = `
+<div
+  className="pokemon-details"
+>
+  <Card>
+    <div
+      className="image"
+    >
+      <img
+        alt="Pikachu"
+        src="image"
+      />
+    </div>
+  </Card>
+  <div
+    className="description"
+  >
+    <h1>
+      Pikachu
+    </h1>
+    <ul />
+  </div>
+</div>
+`;

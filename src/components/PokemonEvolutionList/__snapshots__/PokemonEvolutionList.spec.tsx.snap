@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PokemonEvolutionList component should render 1`] = `
+<div
+  className="pokemon-evolution-list"
+>
+  <PokemonEvolutionCard
+    evolution={
+      Object {
+        "id": "test",
+        "image": "image",
+        "name": "Pikachu",
+      }
+    }
+    key="test"
+  />
+</div>
+`;
